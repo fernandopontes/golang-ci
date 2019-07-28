@@ -22,11 +22,14 @@ steps:
     args: ["soma"]
     env: ["GOPATH=."]
 
-  - id: your_step_here
+  - id: build soma.go
     name: "gcr.io/cloud-builders/go"
     args: ["build","soma"]
     env: ["GOPATH=."]
 
+  - id: build image docker
+    name: "gcr.io/cloud-builders/docker"
+    args: ['build', '--tag=gcr.io/$PROJECT_ID/soma', '.']
+
 images:
-  - 'gcr.io/$PROJECT_ID/go-soma:latest'
-tags: ['cloud-builders-community']
+  - 'gcr.io/$PROJECT_ID/soma'
