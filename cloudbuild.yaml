@@ -24,7 +24,7 @@ steps:
 
   - id: your_step_here
     name: "gcr.io/cloud-builders/go"
-    args: ["run","soma"]
+    args: ["build","soma"]
     env: ["GOPATH=."]
 
 images:
