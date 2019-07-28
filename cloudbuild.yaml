@@ -29,3 +29,4 @@ steps:
 
 images:
   - 'gcr.io/$PROJECT_ID/go-soma:latest'
+tags: ['cloud-builders-community']
