@@ -1,7 +1,5 @@
 FROM scratch
 
-ADD ./src /go/src/soma
-WORKDIR /go/src/soma
+COPY bin/soma /soma
 
-COPY go/bin/soma /soma
-CMD ["/soma"]
+ENTRYPOINT ["/soma"]
